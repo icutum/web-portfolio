@@ -13,6 +13,7 @@
     --clr-accent-400: #ff0015;
     --clr-accent-700: #900813;
     --clr-accent-800: #500c12;
+    --clr-accent-800a: #500c1277;
 
     --ff-body: 'Neue Machina';
     --ff-heading: 'Neue Machina';
@@ -79,11 +80,19 @@ h6 {
 .cursor {
     position: fixed;
     z-index: 1;
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
     border-radius: 100%;
     pointer-events: none;
     backdrop-filter: invert(100%);
+    transition: width 0.3s, height 0.3s;
+}
+
+.cursor--big {
+    width: 80px;
+    height: 80px;
+    background-color: var(--clr-accent-800a);
+    backdrop-filter: none;
 }
 
 /* || Wrapper */
@@ -143,6 +152,5 @@ h6 {
 .hero__description {
     grid-area: 2 / 2;
     font-size: var(--fs-900);
-    font-style: italic;
     color: var(--clr-neutral-100);
 }
