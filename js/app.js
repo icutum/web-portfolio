@@ -11,7 +11,7 @@ resizeCursor();
 function resizeCursor() {
     const links = document.getElementsByTagName("a");
     
-    for (link of links) {
+    for (let link of links) {
         link.addEventListener("mouseenter", () => {
             cursor.classList.add("cursor--big");
         });
