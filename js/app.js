@@ -24,7 +24,8 @@ function resizeCursor() {
 
 descriptionTyping();
 function descriptionTyping() {
-    const description = document.querySelector(".hero__description");const texts = ["desarrollador web", "procrastinador 24/7"];
+    const description = document.querySelector(".hero__description");
+    const texts = ["desarrollador web", "procrastinador 24/7"];
 
     const typeDelay = 175;
     const deleteDelay = 50;
