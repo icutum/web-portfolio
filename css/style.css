@@ -47,17 +47,6 @@ body {
     color: var(--clr-neutral-400);
 }
 
-body::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url('../images/bg-noise.gif');
-    background-repeat: repeat;
-    width: 100%;
-    opacity: 0.05;
-    z-index: -1;
-}
-
 h1,
 h2,
 h3,
@@ -84,6 +73,21 @@ h6 {
 .cursor--big {
     width: 100px;
     height: 100px;
+}
+
+/* || Noise background */
+
+.noise {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200vw;
+    height: 200vh;
+    background-image: url('../images/noise.png');
+    opacity: 0.1;
+    z-index: -1;
+    pointer-events: none;
+    animation: noise 1s steps(3) infinite;
 }
 
 /* || Wrapper */
@@ -145,4 +149,27 @@ h6 {
 .hero__description {
     font-size: var(--fs-900);
     color: var(--clr-neutral-100);
+}
+
+/* || Keyframes */
+@keyframes noise {
+    10% { transform: translate(-5%, -5%); }
+
+    20% { transform: translate(5%, 10%); }
+
+    30% { transform: translate(-10%, 5%); }
+
+    40% { transform: translate(-5%, -10%); }
+
+    50% { transform: translate(10%, 10%); }
+
+    60% { transform: translate(0, 15%); }
+    
+    70% { transform: translate(10%, -10%); }
+
+    80% { transform: translate(0, 10%); }
+
+    90% { transform: translate(5%, 0); }
+
+    100% { transform: translate(10%, 0); }
 }
