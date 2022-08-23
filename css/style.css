@@ -61,6 +61,8 @@ h6 {
 /* || Cursor */
 .cursor {
     position: fixed;
+    top: 0;
+    left: 0;
     z-index: 1;
     width: 50px;
     height: 50px;
@@ -76,7 +78,6 @@ h6 {
 }
 
 /* || Noise background */
-
 .noise {
     position: fixed;
     top: -50%;
@@ -87,7 +88,7 @@ h6 {
     opacity: 0.1;
     z-index: -1;
     pointer-events: none;
-    animation: noise 1s steps(3) infinite;
+    animation: bg-noise 1s steps(3) infinite;
 }
 
 /* || Wrapper */
@@ -100,7 +101,7 @@ h6 {
 .header__nav {
     display: flex;
     justify-content: space-between;
-    padding: 5rem 0;
+    margin: 5rem 0;
 }
 
 .nav__links {
@@ -151,8 +152,16 @@ h6 {
     color: var(--clr-neutral-100);
 }
 
+.hero__description::after {
+    content: '_';
+}
+
+.hero__description--blink::after {
+    animation: caret-blink 1s steps(2, start) infinite;
+}
+
 /* || Keyframes */
-@keyframes noise {
+@keyframes bg-noise {
     10% { transform: translate(-5%, -5%); }
 
     20% { transform: translate(5%, 10%); }
@@ -164,7 +173,7 @@ h6 {
     50% { transform: translate(10%, 10%); }
 
     60% { transform: translate(0, 15%); }
-    
+
     70% { transform: translate(10%, -10%); }
 
     80% { transform: translate(0, 10%); }
@@ -172,4 +181,14 @@ h6 {
     90% { transform: translate(5%, 0); }
 
     100% { transform: translate(10%, 0); }
+}
+
+@keyframes caret-blink {
+    from {
+        visibility: visible;
+    }
+    
+    to {
+        visibility: hidden;
+    }
 }
