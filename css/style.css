@@ -58,14 +58,18 @@ h6 {
     color: var(--clr-neutral-100);
 }
 
+h2::before {
+    content: '_';
+}
+
 /* || Cursor */
 .cursor {
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
-    width: 50px;
-    height: 50px;
+    width: 5rem;
+    height: 5rem;
     border-radius: 100%;
     pointer-events: none;
     backdrop-filter: invert(100%);
@@ -73,8 +77,8 @@ h6 {
 }
 
 .cursor--big {
-    width: 100px;
-    height: 100px;
+    width: 10rem;
+    height: 10rem;
 }
 
 /* || Noise background */
@@ -92,7 +96,7 @@ h6 {
 }
 
 /* || Wrapper */
-.wrapper {
+.body__wrapper {
     padding: 0 10rem;
 }
 
@@ -148,6 +152,8 @@ h6 {
 }
 
 .hero__description {
+    overflow: hidden;
+    white-space: nowrap;
     font-size: var(--fs-900);
     color: var(--clr-neutral-100);
 }
@@ -158,6 +164,29 @@ h6 {
 
 .hero__description--blink::after {
     animation: caret-blink 1s steps(2, start) infinite;
+}
+
+.hero__biography {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10rem 0 0;
+}
+
+.hero__biography-text {
+    font-size: var(--fs-500);
+    width: 50rem;
+    text-align: right;
+}
+
+/* Main */
+.main {
+    margin: 15rem 0;
+    font-size: var(--fs-500);
+}
+
+/* About */
+.about__text {
+    margin: 5rem 0 0 5rem;
 }
 
 /* || Keyframes */
