@@ -64,3 +64,26 @@ function descriptionTyping() {
         }
     }
 }
+
+calculateAge()
+function calculateAge() {
+    const text = document.querySelector(".age");
+
+    const birthday = new Date(2002, 4, 27);
+    let sysdate = new Date();
+
+    const birthdayYear = birthday.getYear();
+    const birthdayMonth = birthday.getMonth();
+    const birthdayDate = birthday.getDate();
+    
+    let sysdateYear = sysdate.getYear();
+    let sysdateMonth = sysdate.getMonth();
+    let sysdateDate = sysdate.getDate();
+
+    let age = sysdateYear - birthdayYear;
+
+    if (sysdateMonth < birthdayMonth) age--;
+    else if (sysdateMonth === birthdayMonth && sysdateDate < birthdayDate) age--;
+
+    text.innerHTML = age;
+}
