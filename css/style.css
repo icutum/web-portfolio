@@ -16,7 +16,7 @@
 
     --fs-400: 1.6rem;
     --fs-500: 2.4rem;
-    --fs-600: 3.2rem;
+    --fs-600: 3.4rem;
     --fs-700: 4rem;
     --fs-800: 4.8rem;
     --fs-900: 13.8rem;
@@ -62,14 +62,18 @@ h2::before {
     content: '_';
 }
 
+a {
+    color: var(--clr-neutral-100);
+}
+
 /* || Cursor */
 .cursor {
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
-    width: 5rem;
-    height: 5rem;
+    width: 5ch;
+    height: 5ch;
     border-radius: 100%;
     pointer-events: none;
     backdrop-filter: invert(100%);
@@ -77,8 +81,8 @@ h2::before {
 }
 
 .cursor--big {
-    width: 10rem;
-    height: 10rem;
+    width: 10ch;
+    height: 10ch;
 }
 
 /* || Noise background */
@@ -100,12 +104,16 @@ h2::before {
     padding: 0 10rem;
 }
 
+/* || Header */
+.header {
+    height: 100vh;
+}
 
 /* || Header Nav */
 .header__nav {
     display: flex;
     justify-content: space-between;
-    margin: 5rem 0;
+    margin: 5rem 0 7.5rem;
 }
 
 .nav__links {
@@ -117,7 +125,6 @@ h2::before {
 .nav__link {
     position: relative;
     font-size: var(--fs-400);
-    color: var(--clr-neutral-100);
 }
 
 .nav__link::before {
@@ -173,8 +180,8 @@ h2::before {
 }
 
 .hero__biography-text {
+    width: 25ch;
     font-size: var(--fs-500);
-    width: 50rem;
     text-align: right;
 }
 
@@ -187,6 +194,8 @@ h2::before {
 /* About */
 .about__text {
     margin: 5rem 0 0 5rem;
+    width: 50ch;
+    font-size: var(--fs-600);
 }
 
 /* || Keyframes */
