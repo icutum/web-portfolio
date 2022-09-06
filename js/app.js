@@ -65,7 +65,7 @@ function descriptionTyping() {
     }
 }
 
-calculateAge()
+calculateAge();
 function calculateAge() {
     const text = document.querySelector(".age");
 
@@ -73,4 +73,16 @@ function calculateAge() {
 
     let age = new Date(Date.now() - birthday.getTime());
     text.innerHTML = Math.abs(age.getUTCFullYear() - 1970);
+}
+
+rotatingText();
+function rotatingText() {
+    const text = document.querySelector(".rotating-circle__text");
+    let degrees = 360 / text.innerHTML.length - 0.5;
+
+    text.innerHTML = text.innerText.split("").map(
+        (letter, i) => {
+            return `<span class="rotating-circle__letter" style="transform: rotate(${degrees * i}deg);">${letter}</span>`;
+        }
+    ).join("");
 }
