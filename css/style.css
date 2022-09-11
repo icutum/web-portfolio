@@ -59,7 +59,7 @@ h6 {
 }
 
 h2::before {
-    content: '_';
+    content: '>';
 }
 
 a {
@@ -156,6 +156,7 @@ a {
 .hero__description {
     overflow: hidden;
     white-space: nowrap;
+    height: 2ch;
     font-size: var(--fs-900);
     color: var(--clr-neutral-100);
 }
@@ -215,16 +216,51 @@ a {
 
 /* Main */
 .main {
-    margin: 15rem 0;
     font-size: var(--fs-500);
 }
 
-/* About */
-.about__text {
-    margin: 5rem 0 0 5rem;
-    width: 50ch;
+.main__section {
+    margin: 15rem 0 0;
+}
+
+.section__text {
+    margin: 5rem 5rem 0;
+    padding: 0 15ch 0 0;
     text-align: justify;
     font-size: var(--fs-600);
+}
+
+.section__text--right {
+    padding: 0 0 0 15ch;
+}
+
+/* Projects */
+.projects-grid {
+    margin: 5rem 0 0;
+}
+
+.project__header,
+.project__item {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.project__header {
+    margin: 0 0 1rem;
+}
+
+.project__item {
+    height: 10rem;
+    border-top: 1px solid var(--clr-neutral-400);
+}
+
+.project__item:last-child {
+    border-bottom: 1px solid var(--clr-neutral-400);
+}
+
+.project__date {
+    text-align: right;
 }
 
 /* || Keyframes */
