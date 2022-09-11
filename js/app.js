@@ -1,16 +1,16 @@
-const cursor = document.querySelector(".cursor");
+ScrollReveal().reveal(".main__section", {delay: 250});
 
-trackMouse();
-function trackMouse() {
+mouseEvents();
+function mouseEvents() {
+    const cursor = document.querySelector(".cursor");
+    const links = document.getElementsByTagName("a");
+
+    /* Tracks the cursor div to the mouse position */
     addEventListener("mousemove", e => {
         cursor.style.transform = `translate(-50%, -50%) translate(${e.clientX}px, ${e.clientY}px)`;
     });
-}
-
-resizeCursor();
-function resizeCursor() {
-    const links = document.getElementsByTagName("a");
     
+    /* Resizes the cursor div when hovering on a link */
     for (let link of links) {
         link.addEventListener("mouseenter", () => {
             cursor.classList.add("cursor--big");
@@ -25,9 +25,9 @@ function resizeCursor() {
 descriptionTyping();
 function descriptionTyping() {
     const description = document.querySelector(".hero__description");
-    const texts = ["desarrollador web", "procrastinador 24/7"];
+    const texts = ["desarrollador web", "web developer", "ウェブ開発者"];
 
-    const typeDelay = 175;
+    const typeDelay = 200;
     const deleteDelay = 50;
     const waitDelay = 2000;
 
