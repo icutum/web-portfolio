@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Icutum</title>
     <script src="./js/app.js" defer></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.js"></script>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
 </head>
 <body>
     <div class="cursor"></div>
@@ -16,9 +18,9 @@
             <nav class="header__nav">
                 <img src="" alt="logo" class="nav__logo">
                 <ul class="nav__links">
-                    <li><a href="#" class="nav__link">sobre mí</a></li>
-                    <li><a href="#" class="nav__link">proyectos</a></li>
-                    <li><a href="#" class="nav__link">contacto</a></li>
+                    <li><a href="#about" class="nav__link">sobre mí</a></li>
+                    <li><a href="#projects" class="nav__link">proyectos</a></li>
+                    <li><a href="#contact" class="nav__link">contacto</a></li>
                 </ul>
                 <div class="nav__menu">
                     <div class="menu__line"></div>
@@ -29,10 +31,10 @@
                 <h1 class="hero__title">soy Mario</h1>
                 <p class="hero__description"></p>
                 <div class="hero__biography">
-                    <p class="hero__biography-text">desarrollador ubicado en España especializado en el front-end</p>
+                    <p class="hero__biography-text">desarrollador ubicado en España enfocado en el front-end</p>
                 </div>
                 <div class="hero__rotating-circle">
-                    <p class="rotating-circle__text">seguir leyendo - seguir leyendo -</p>
+                    <p class="rotating-circle__text">pulsa aquí para seguir leyendo</p>
                     <a href="#about" class="rotating-circle__arrow">
                         <img src="./images/arrow-down.svg" alt="flecha">
                     </a>
@@ -40,13 +42,53 @@
             </div>
         </header>
         <main class="main">
-            <div class="main__about" id="about">
-                <h2 class="about__title">sobre mí</h2>
-                <p class="about__text">Me llamo Mario, aunque también se me conoce por mi nick "Icutum", tengo <span class="age"></span> años y actualmente estoy estudiando desarrollo web. Desde pequeño me interesaba el mundo de las páginas web, y ahora mi objetivo es aprender más sobre las tecnologías que hacen que la web funcione.</p>
-            </div>
+            <section class="main__section" id="about">
+                <h2 class="section__title">sobre mí</h2>
+                <p class="section__text">Tengo <span class="age">¿?</span> años y actualmente estoy estudiando desarrollo web. Desde pequeño me interesaba el mundo de las páginas web, y ahora mi objetivo es aprender más sobre las tecnologías que hacen que la web funcione.</p>
+                <p class="section__text section__text--right">A futuro tengo pensado aprender más sobre el SEO y sobre el diseño UI/UX para refinar el arte de crear páginas y que tengan un mayor alcance.</p>
+            </section>
+            <section class="main__section" id="projects">
+                <h2 class="section__title">proyectos</h2>
+                <div class="projects-grid">
+                    <div class="project__header">
+                        <p class="project__type">tipo</p>
+                        <p class="project__name">nombre</p>
+                        <p class="project__date">año</p>
+                    </div>
+                    <a href="https://icutum.confugiradores.es/tictactoe" class="project__item">
+                        <div class="project__type">página web</div>
+                        <div class="project__name">tres en raya</div>
+                        <div class="project__date">2022</div>
+                    </a>
+                    <a href="#" class="project__item">
+                        <div class="project__type">¿?</div>
+                        <div class="project__name">¿?</div>
+                        <div class="project__date">20XX</div>
+                    </a>
+                    <a href="#" class="project__item">
+                        <div class="project__type">¿?</div>
+                        <div class="project__name">¿?</div>
+                        <div class="project__date">20XX</div>
+                    </a>
+                    <a href="#" class="project__item">
+                        <div class="project__type">¿?</div>
+                        <div class="project__name">¿?</div>
+                        <div class="project__date">20XX</div>
+                    </a>
+                    <a href="#" class="project__item">
+                        <div class="project__type">¿?</div>
+                        <div class="project__name">¿?</div>
+                        <div class="project__date">20XX</div>
+                    </a>
+                </div>
+            </section>
+            <section class="main__section" id="contact">
+                <h2 class="section__title">contacto</h2>
+                
+            </section>
         </main>
         <footer class="footer">
-
+            <!--GPL GNU 3.0 blablabla-->
         </footer>
     </div>
 </body>
