@@ -10,6 +10,7 @@
     --clr-neutral-100: #eee;
     --clr-neutral-400: #aaa;
     --clr-neutral-800: #111;
+    --clr-neutral-800-alpha: #111A;
 
     --ff-body: 'Neue Machina';
     --ff-heading: 'Neue Machina';
@@ -30,6 +31,8 @@
     padding: 0;
     font: inherit;
     color: inherit;
+    border: none;
+    outline: none;
     text-decoration: none;
 }
 
@@ -107,35 +110,57 @@ a {
 /* || Header Nav */
 .header__nav {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    margin: 5rem 0 7.5rem;
+    height: 6rem;
+    line-height: 6rem;
+    border-bottom: 2px solid var(--clr-neutral-100);
+    /* margin: 5rem 0 7.5rem; */
+    margin: 0 0 7.5rem;
+}
+
+.nav__logo {
+    margin: 0 5rem;
 }
 
 .nav__links {
+    display: flex;
+    gap: 5rem;
+}
+
+.nav__list {
     display: flex;
     gap: 10rem;
     list-style: none;
 }
 
 .nav__link {
+    display: block;
+    height: 100%;
     position: relative;
     font-size: var(--fs-400);
 }
 
-.nav__link::before {
+.nav__link--featured {
+    padding: 0 2.5em;
+    background-color: var(--clr-neutral-100);
+    color: var(--clr-neutral-800);
+}
+
+.nav__link:not(.nav__link--featured)::before {
     content: '';
     position: absolute;
     bottom: -0.25em;
     left: 0;
     width: 100%;
-    height: 0.1em;
+    height: 0.2em;
     background-color: var(--clr-neutral-100);
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.25s ease-in-out;
 }
 
-.nav__link:hover::before {
+.nav__link:not(.nav__link--featured):hover::before {
     transform: scaleX(100%);
     transform-origin: left;
 }
@@ -216,6 +241,7 @@ a {
 
 /* Main */
 .main {
+    padding: 0 10rem;
     font-size: var(--fs-500);
 }
 

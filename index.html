@@ -13,83 +13,84 @@
 <body>
     <div class="cursor"></div>
     <div class="noise"></div>
-    <div class="body__wrapper">
-        <header class="header">
-            <nav class="header__nav">
-                <img src="" alt="logo" class="nav__logo">
-                <ul class="nav__links">
-                    <li><a href="#about" class="nav__link">sobre mí</a></li>
-                    <li><a href="#projects" class="nav__link">proyectos</a></li>
-                    <li><a href="#contact" class="nav__link">contacto</a></li>
+    <header class="header">
+        <nav class="header__nav">
+            <img src="" alt="logo" class="nav__logo">
+            <div class="nav__links">
+                <ul class="nav__list">
+                    <li class="nav__list-item"><a href="#about" class="nav__link">sobre mí</a></li>
+                    <li class="nav__list-item"><a href="#projects" class="nav__link">proyectos</a></li>
+                    <li class="nav__list-item"><a href="#contact" class="nav__link">contacto</a></li>
                 </ul>
-                <div class="nav__menu">
-                    <div class="menu__line"></div>
-                    <div class="menu__line"></div>  
-                </div>
-            </nav>
-            <div class="header__hero">
-                <h1 class="hero__title">soy Mario</h1>
-                <p class="hero__description"></p>
-                <div class="hero__biography">
-                    <p class="hero__biography-text">desarrollador ubicado en España enfocado en el front-end</p>
-                </div>
-                <div class="hero__rotating-circle">
-                    <p class="rotating-circle__text">pulsa aquí para seguir leyendo</p>
-                    <a href="#about" class="rotating-circle__arrow">
-                        <img src="./images/arrow-down.svg" alt="flecha">
-                    </a>
-                </div>
+                <a href="https://github.com/icutum" class="nav__link nav__link--featured">GitHub</a>
             </div>
-        </header>
-        <main class="main">
-            <section class="main__section" id="about">
-                <h2 class="section__title">sobre mí</h2>
-                <p class="section__text">Tengo <span class="age">¿?</span> años y actualmente estoy estudiando desarrollo web. Desde pequeño me interesaba el mundo de las páginas web, y ahora mi objetivo es aprender más sobre las tecnologías que hacen que la web funcione.</p>
-                <p class="section__text section__text--right">A futuro tengo pensado aprender más sobre el SEO y sobre el diseño UI/UX para refinar el arte de crear páginas y que tengan un mayor alcance.</p>
-            </section>
-            <section class="main__section" id="projects">
-                <h2 class="section__title">proyectos</h2>
-                <div class="projects-grid">
-                    <div class="project__header">
-                        <p class="project__type">tipo</p>
-                        <p class="project__name">nombre</p>
-                        <p class="project__date">año</p>
-                    </div>
-                    <a href="https://icutum.confugiradores.es/tictactoe" class="project__item">
-                        <div class="project__type">página web</div>
-                        <div class="project__name">tres en raya</div>
-                        <div class="project__date">2022</div>
-                    </a>
-                    <a href="#" class="project__item">
-                        <div class="project__type">¿?</div>
-                        <div class="project__name">¿?</div>
-                        <div class="project__date">20XX</div>
-                    </a>
-                    <a href="#" class="project__item">
-                        <div class="project__type">¿?</div>
-                        <div class="project__name">¿?</div>
-                        <div class="project__date">20XX</div>
-                    </a>
-                    <a href="#" class="project__item">
-                        <div class="project__type">¿?</div>
-                        <div class="project__name">¿?</div>
-                        <div class="project__date">20XX</div>
-                    </a>
-                    <a href="#" class="project__item">
-                        <div class="project__type">¿?</div>
-                        <div class="project__name">¿?</div>
-                        <div class="project__date">20XX</div>
-                    </a>
+            <div class="nav__menu">
+                <div class="menu__line"></div>
+                <div class="menu__line"></div>  
+            </div>
+        </nav>
+        <div class="header__hero">
+            <h1 class="hero__title">soy Mario</h1>
+            <p class="hero__description"></p>
+            <div class="hero__biography">
+                <p class="hero__biography-text">desarrollador ubicado en España enfocado en el front-end</p>
+            </div>
+            <div class="hero__rotating-circle">
+                <p class="rotating-circle__text">pulsa aquí para seguir leyendo</p>
+                <a href="#about" class="rotating-circle__arrow">
+                    <img src="./images/arrow-down.svg" alt="flecha">
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="main__section" id="about">
+            <h2 class="section__title">sobre mí</h2>
+            <p class="section__text">Tengo <span class="age">¿?</span> años y actualmente estoy estudiando desarrollo web. Desde pequeño me interesaba el mundo de las páginas web, y ahora mi objetivo es aprender más sobre las tecnologías que hacen que la web funcione.</p>
+            <p class="section__text section__text--right">A futuro tengo pensado aprender más sobre el SEO y sobre el diseño UI/UX para refinar el arte de crear páginas y que tengan un mayor alcance.</p>
+        </section>
+        <section class="main__section" id="projects">
+            <h2 class="section__title">proyectos</h2>
+            <div class="projects-grid">
+                <div class="project__header">
+                    <p class="project__type">tipo</p>
+                    <p class="project__name">nombre</p>
+                    <p class="project__date">año</p>
                 </div>
-            </section>
-            <section class="main__section" id="contact">
-                <h2 class="section__title">contacto</h2>
-                
-            </section>
-        </main>
-        <footer class="footer">
-            <!--GPL GNU 3.0 blablabla-->
-        </footer>
-    </div>
+                <a href="https://icutum.confugiradores.es/tictactoe" class="project__item">
+                    <div class="project__type">página web</div>
+                    <div class="project__name">tres en raya</div>
+                    <div class="project__date">2022</div>
+                </a>
+                <a href="#" class="project__item">
+                    <div class="project__type">¿?</div>
+                    <div class="project__name">¿?</div>
+                    <div class="project__date">20XX</div>
+                </a>
+                <a href="#" class="project__item">
+                    <div class="project__type">¿?</div>
+                    <div class="project__name">¿?</div>
+                    <div class="project__date">20XX</div>
+                </a>
+                <a href="#" class="project__item">
+                    <div class="project__type">¿?</div>
+                    <div class="project__name">¿?</div>
+                    <div class="project__date">20XX</div>
+                </a>
+                <a href="#" class="project__item">
+                    <div class="project__type">¿?</div>
+                    <div class="project__name">¿?</div>
+                    <div class="project__date">20XX</div>
+                </a>
+            </div>
+        </section>
+        <section class="main__section" id="contact">
+            <h2 class="section__title">contacto</h2>
+            
+        </section>
+    </main>
+    <footer class="footer">
+        <!--GPL GNU 3.0 blablabla-->
+    </footer>
 </body>
 </html>
