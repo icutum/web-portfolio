@@ -74,8 +74,7 @@ a {
 /* || Outline for text */
 .outline {
     color: transparent;
-    -webkit-text-stroke: 2px var(--clr-neutral-100);
-    font-size: var(--fs-900);
+    -webkit-text-stroke: 2.5px var(--clr-neutral-100);
 }
 
 /* || Cursor */
@@ -148,13 +147,7 @@ a {
     font-size: var(--fs-400);
 }
 
-.nav__link--featured {
-    padding: 0 2.5em;
-    background-color: var(--clr-neutral-100);
-    color: var(--clr-neutral-800);
-}
-
-.nav__link:not(.nav__link--featured)::before {
+.nav__link::before {
     content: '';
     position: absolute;
     bottom: 0;
@@ -167,9 +160,15 @@ a {
     transition: transform 0.25s ease-in-out;
 }
 
-.nav__link:not(.nav__link--featured):hover::before {
+.nav__link:hover::before {
     transform: scaleX(100%);
     transform-origin: left;
+}
+
+.nav__featured {
+    padding: 0 2.5em;
+    background-color: var(--clr-neutral-100);
+    color: var(--clr-neutral-800);
 }
 
 .nav__menu {
@@ -179,9 +178,6 @@ a {
 /* || Header Hero */
 .header__hero {
     padding: 0 10rem;
-}
-
-.hero__title {
     font-size: var(--fs-900);
 }
 
@@ -189,7 +185,6 @@ a {
     overflow: hidden;
     white-space: nowrap;
     height: 2ch;
-    font-size: var(--fs-900);
     color: var(--clr-neutral-100);
 }
 
@@ -219,6 +214,7 @@ a {
     align-items: center;
     justify-content: center;
     height: 20rem;
+    font-size: var(--fs-500);
 }
 
 .rotating-circle__text {
