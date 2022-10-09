@@ -27,9 +27,9 @@ function descriptionTyping() {
     const description = document.querySelector(".hero__description");
     const texts = ["desarrollador web", "web developer", "ウェブ開発者"];
 
-    const typeDelay = 200;
-    const deleteDelay = 50;
-    const waitDelay = 2000;
+    const TYPE_DELAY = 200;
+    const DELETE_DELAY = 50;
+    const WAIT_DELAY = 2000;
 
     let textIndex = 0;
     let charIndex = 0;
@@ -40,10 +40,10 @@ function descriptionTyping() {
             description.innerHTML += texts[textIndex].charAt(charIndex);
             charIndex++;
 
-            setTimeout(typeText, typeDelay);
+            setTimeout(typeText, TYPE_DELAY);
         } else {
             description.classList.add("hero__description--blink");
-            setTimeout(deleteText, deleteDelay + waitDelay);
+            setTimeout(deleteText, DELETE_DELAY + WAIT_DELAY);
         }
     }
 
@@ -55,12 +55,12 @@ function descriptionTyping() {
             description.innerHTML = texts[textIndex].substring(0, charIndex - 1);
             charIndex--;
 
-            setTimeout(deleteText, deleteDelay);
+            setTimeout(deleteText, DELETE_DELAY);
         } else {
             textIndex++;
             if (textIndex >= texts.length) textIndex = 0;
 
-            setTimeout(typeText, typeDelay);
+            setTimeout(typeText, TYPE_DELAY);
         }
     }
 }
