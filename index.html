@@ -81,20 +81,27 @@
         <section class="main__section" id="contact">
             <h2 class="section__title">contacto</h2>
             <p>Cuéntame un poco sobre tí</p>
-            <form action="" method="post">
-                <label for="">
-                    Tu nombre:
-                    <input type="text" name="name" id="" placeholder="Pepe Viyuela *" required>
-                </label>
-                <label for="">
-                    Tu correo electrónico:
-                    <input type="text" name="mail" id="" placeholder="pepe@viyuela.com *" required>
-                </label>
-                <label for="">
-                    Tu mensaje:
-                    <textarea name="message" placeholder="Hola Mario, te contacto para... *" required></textarea>
-                </label>
-                <input type="submit" value="Enviar">
+            <form class="form" action="" method="post">
+                <div class="form__section">
+                    <label class="form__query" for="name">
+                        <span class="form__label form__label--required">Tu nombre:</span>
+                        <input class="form__input" type="text" name="name" placeholder="Pepe Viyuela" required>
+                    </label>
+                </div>
+                <div class="form__section">
+                    <label class="form__query" for="mail">
+                        <span class="form__label form__label--required">Tu correo electrónico:</span>
+                        <input class="form__input" type="text" name="mail" placeholder="pepe@viyuela.com" required>
+                    </label>
+                </div>
+                <div class="form__section">
+                    <label class="form__query" for="message">
+                        <span class="form__label form__label--required">Tu mensaje:</span>
+                        <textarea class="form__textarea" name="message" placeholder="Hola Mario, te contacto para..." required></textarea>
+                    </label>
+                </div>
+                <p class="form__disclaimer">Los campos con un asterisco (*) son obligatorios.</p>
+                <input class="form__submit" type="submit" value="Enviar">
             </form>
         </section>
     </main>
