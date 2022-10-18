@@ -1,7 +1,7 @@
 @font-face {
-    font-family: 'Neue Machina';
-    src: url('../fonts/neuemachina/neuemachina-regular-webfont.woff2') format('woff2'),
-         url('../fonts/neuemachina/neuemachina-regular-webfont.woff') format('woff');
+    font-family: 'Neue Machina Inktrap';
+    src: url('../fonts/neuemachinainktrap/neuemachina-inktrapregular-webfont.woff2') format('woff2'),
+         url('../fonts/neuemachinainktrap/neuemachina-inktrapregular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -10,10 +10,9 @@
     --clr-neutral-100: #eee;
     --clr-neutral-400: #aaa;
     --clr-neutral-800: #111;
-    --clr-neutral-800-alpha: #111A;
 
-    --ff-body: 'Neue Machina';
-    --ff-heading: 'Neue Machina';
+    --ff-body: 'Neue Machina Inktrap';
+    --ff-heading: 'Neue Machina Inktrap';
 
     --fs-400: 1.6rem;
     --fs-500: 2.4rem;
@@ -299,6 +298,40 @@ a {
 .project__external {
     width: 5rem;
     height: 5rem;
+}
+
+/* || Contact */
+form {
+    counter-reset: label;
+}
+
+label {
+    margin: 3rem 0;
+    padding: 1em 0;
+    border-top: 1px solid var(--clr-neutral-100);
+}
+
+label::before {
+    content: '0' counter(label);
+    counter-increment: label;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input, textarea {
+    background-color: transparent;
+    color: var(--clr-neutral-100);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--clr-neutral-400);
+}
+
+label, input, textarea {
+    display: block;
 }
 
 /* || Keyframes */
