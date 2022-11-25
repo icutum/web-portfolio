@@ -125,8 +125,14 @@ a {
     margin: 0 0 7.5rem;
 }
 
-.nav__logo {
-    margin: 0 5rem;
+.nav__logo-link {
+    margin: 0 2.5rem;
+}
+
+.nav__logo-image {
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
 }
 
 .nav__links {
