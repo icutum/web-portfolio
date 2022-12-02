@@ -9,7 +9,7 @@ function mouseEvents() {
     addEventListener("mousemove", e => {
         cursor.style.transform = `translate(-50%, -50%) translate(${e.clientX}px, ${e.clientY}px)`;
     });
-    
+
     /* Resizes the cursor div when hovering on a link */
     for (let link of links) {
         link.addEventListener("mouseenter", () => {
