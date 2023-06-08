@@ -1,114 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Inicio - Icutum</title>
-    <script src="./js/app.js" defer></script>
-    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.js"></script>
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="icon" href="./images/logo.svg">
-</head>
-<body>
-    <div class="cursor"></div>
-    <div class="noise"></div>
-    <header class="header">
-        <nav class="header__nav">
-            <a href="./" class="nav__logo-link">
-                <img src="./images/logo.svg" alt="logo" class="nav__logo-image">
-            </a>
-            <div class="nav__links">
-                <ul class="nav__list">
-                    <li class="nav__list-item"><a href="#about" class="nav__link nav__link--active">sobre mí</a></li>
-                    <li class="nav__list-item"><a href="#projects" class="nav__link">proyectos</a></li>
-                    <li class="nav__list-item"><a href="#contact" class="nav__link">contacto</a></li>
-                </ul>
-                <a href="https://github.com/icutum" target="_blank" rel="noopener noreferrer" class="nav__featured">GitHub</a>
-            </div>
-            <div class="nav__menu">
-                <div class="menu__line"></div>
-                <div class="menu__line"></div>  
-            </div>
-        </nav>
-        <div class="header__hero">
-            <h1 class="hero__title">soy <span class="outline">Mario</span></h1>
-            <p class="hero__description"></p>
-            <div class="hero__biography">
-                <p class="hero__biography-text">desarrollador ubicado en España enfocado en el front-end</p>
-            </div>
-            <div class="hero__rotating-circle">
-                <p class="rotating-circle__text">pulsa aquí para seguir leyendo</p>
-                <a href="#about" class="rotating-circle__arrow">
-                    <img src="./images/arrow-down.svg" alt="flecha">
-                </a>
-            </div>
-        </div>
-    </header>
-    <main class="main">
-        <section class="main__section" id="about">
-            <h2 class="section__title">sobre mí</h2>
-            <p class="section__text">Tengo <span class="age">¿?</span> años y actualmente estoy estudiando desarrollo web. Desde pequeño me interesaba el mundo de las páginas web, y ahora mi objetivo es aprender más sobre las tecnologías que hacen que la web funcione.</p>
-            <p class="section__text section__text--right">A futuro tengo pensado aprender más sobre el SEO y sobre el diseño UI/UX para refinar el arte de crear páginas y que tengan un mayor alcance.</p>
-        </section>
-        <section class="main__section" id="projects">
-            <h2 class="section__title">proyectos destacados</h2>
-            <div class="projects-grid">
-                <a href="https://icutum.confugiradores.es/tictactoe" target="_blank" rel="noopener noreferrer" class="project__item">
-                    <p class="project__name">tres <span class="outline">en</span> raya</p>
-                    <img src="./images/external.svg" alt="Tres en raya" class="project__external">
-                </a>
-
-                <a href="" target="_blank" rel="noopener noreferrer" class="project__item">
-                    <p class="project__name">¿?</p>
-                    <img src="./images/external.svg" alt="Tres en raya" class="project__external">
-                </a>
-
-                <a href="" target="_blank" rel="noopener noreferrer" class="project__item">
-                    <p class="project__name">¿?</p>
-                    <img src="./images/external.svg" alt="Tres en raya" class="project__external">
-                </a>
-
-                <a href="" target="_blank" rel="noopener noreferrer" class="project__item">
-                    <p class="project__name">¿?</p>
-                    <img src="./images/external.svg" alt="Tres en raya" class="project__external">
-                </a>
-
-                <a href="" target="_blank" rel="noopener noreferrer" class="project__item">
-                    <p class="project__name">¿?</p>
-                    <img src="./images/external.svg" alt="Tres en raya" class="project__external">
-                </a>
-            </div>
-        </section>
-        <section class="main__section" id="contact">
-            <h2 class="section__title">contacto</h2>
-            <p>Cuéntame un poco sobre tí</p>
-            <form class="form" action="" method="post">
-                <div class="form__section">
-                    <label class="form__query" for="name">
-                        <span class="form__label form__label--required">Tu nombre:</span>
-                        <input class="form__input" type="text" name="name" placeholder="Pepe Viyuela" required>
-                    </label>
-                </div>
-                <div class="form__section">
-                    <label class="form__query" for="mail">
-                        <span class="form__label form__label--required">Tu correo electrónico:</span>
-                        <input class="form__input" type="text" name="mail" placeholder="pepe@viyuela.com" required>
-                    </label>
-                </div>
-                <div class="form__section">
-                    <label class="form__query" for="message">
-                        <span class="form__label form__label--required">Tu mensaje:</span>
-                        <textarea class="form__textarea" name="message" placeholder="Hola Mario, te contacto para..." required></textarea>
-                    </label>
-                </div>
-                <p class="form__disclaimer">Los campos con un asterisco (*) son obligatorios.</p>
-                <input class="form__submit" type="submit" value="Enviar">
-            </form>
-        </section>
-    </main>
-    <footer class="footer">
-        <!--GPL GNU 3.0 blablabla-->
-    </footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

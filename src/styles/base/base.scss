@@ -1,0 +1,17 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $clr-primary;
+  color: $clr-secondary;
+  font-size: 1.6rem;
+}
+
+hr {
+  border: 0;
+  height: 10rem;
+  background-image: repeating-linear-gradient(
+    135deg, $clr-secondary 0%, $clr-secondary .75%, transparent .75%, transparent 1.5%
+  );
+}
