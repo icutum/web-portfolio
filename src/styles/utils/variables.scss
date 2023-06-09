@@ -1,4 +1,27 @@
-$clr-primary: #f0f0f0;
+// Colors
+$clr-primary: #fdfbf7;
 $clr-secondary: #151515;
 
-$ff-primary: '';
+// Fonts
+$ff-primary: 'Space Grotesk';
+
+// Font weights
+$fw-normal: normal;
+$fw-bold: bold;
+
+// Breakpoints
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+
+// Viewports
+$viewports: (
+  sm: 510px,
+  md: 700px,
+  lg: 920px,
+  xl: 1130px
+)

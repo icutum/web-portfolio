@@ -6,14 +6,14 @@ export function App() {
   return (
     <>
       <Navbar />
-      <main>
+      <main className='main'>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/projects' element={<Projects />} />
           <Route path='*' element={<Error />} />
         </Routes>
-        <hr />
+        <hr className='stripes'/>
       </main>
     </>
   )
