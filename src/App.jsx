@@ -2,19 +2,22 @@ import { Routes, Route } from 'react-router-dom';
 import { Home, About, Projects, Error } from './pages';
 import { Navbar } from './components';
 
+export const routes = [
+  { path: '/', element: <Home /> },
+  { path: '/about', element: <About /> },
+  { path: '/projects', element: <Projects /> },
+  { path: '*', element: <Error /> },
+]
+
 export function App() {
   return (
     <>
       <Navbar />
-      <main className='main'>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/projects' element={<Projects />} />
-          <Route path='*' element={<Error />} />
-        </Routes>
-        <hr className='stripes'/>
-      </main>
+      <Routes>
+        {routes.map((route, index) => (
+          <Route key={index} path={route.path} element={route.element} />
+        ))}
+      </Routes>
     </>
   )
 }

@@ -1,0 +1,44 @@
+@import '../../styles/utils/variables.scss';
+
+.hero {
+  margin: 5rem 0;
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    background: {
+      image:  linear-gradient($clr-purple-400, $clr-purple-800);
+      clip: text
+    }
+    -webkit-text-fill-color: transparent;
+    font: {
+      size: 9.6rem;
+      weight: $fw-bold;
+    }
+  }
+}
+
+.stripes {
+  position: relative;
+  border: 0;
+  height: 10rem;
+
+  background: {
+    image: repeating-linear-gradient(
+      135deg,
+      $clr-secondary -2.5%,
+      $clr-secondary 1%,
+      transparent 0%,
+      transparent 3.5%
+    );
+    position: right 1.5rem;
+    repeat: no-repeat;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -5px;
+    border-top: 1rem solid $clr-secondary;
+  }
+}
