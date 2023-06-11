@@ -5,22 +5,36 @@ html {
 body {
   background-color: $clr-primary;
   color: $clr-secondary;
-  font-family: $ff-primary;
-  font-size: 2.4rem;
-  font-weight: $fw-bold;
+  font: {
+    family: $ff-secondary;
+    weight: $fw-normal;
+    size: 1.6rem;
+  }
 }
 
-.main {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $ff-primary;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
   width: 100%;
   margin: 0 auto;
-  padding-right: 1.6rem;
-  padding-left: 1.6rem;
+  padding: 0 1.6rem;
 
   @if map-get($breakpoints, 'sm') {
     @media (min-width: map-get($breakpoints, 'sm')) {
       max-width: map-get($viewports, 'sm');
-      padding-right: 0;
-      padding-left: 0;
+      padding: 0;
     }
   }
 
@@ -40,23 +54,5 @@ body {
     @media (min-width: map-get($breakpoints, 'xl')) {
       max-width: map-get($viewports, 'xl');
     }
-  }
-}
-
-.stripes {
-  position: relative;
-  border: 0;
-  height: 10rem;
-  background-image: repeating-linear-gradient(
-    135deg, $clr-secondary -2.5%, $clr-secondary 1%, transparent 0%, transparent 3.5%
-  );
-  background-position: right 1.5rem;
-  background-repeat: no-repeat;
-
-  &::before {
-    content: '';
-    position: absolute;
-    inset: -5px;
-    border-top: 1rem solid $clr-secondary;
   }
 }
