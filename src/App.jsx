@@ -1,8 +1,10 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
+
 import { Home, About, Projects, Error } from './pages';
 import { Navbar } from './components';
 
-export const routes = [
+const routes = [
   { path: '/', element: <Home /> },
   { path: '/about', element: <About /> },
   { path: '/projects', element: <Projects /> },
@@ -10,14 +12,18 @@ export const routes = [
 ]
 
 export function App() {
+  const location = useLocation()
+
   return (
     <>
       <Navbar />
-      <Routes>
-        {routes.map((route, index) => (
-          <Route key={index} path={route.path} element={route.element} />
-        ))}
-      </Routes>
+      <AnimatePresence mode='wait'>
+        <Routes key={location.pathname} location={location}>
+          {routes.map((route, index) => (
+            <Route key={index} path={route.path} element={route.element} />
+          ))}
+        </Routes>
+      </AnimatePresence>
     </>
   )
 }
