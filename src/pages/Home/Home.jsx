@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Hero, AnimatePage } from '../../components';
+import { Hero, AnimatePage } from '../../components'
 import './Home.scss'
 
 const sectionVariants = {

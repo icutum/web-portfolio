@@ -12,7 +12,7 @@
   // Display
   display: flex;
   justify-content: flex-end;
-  padding: 1em 5em;
+  padding: 1.5em 5em;
 
   // Background
   background-color: rgba(0, 0, 0, .75);
@@ -26,35 +26,35 @@
   }
 
   &__list {
-    display: flex;
-    align-items: center;
-    gap: 5rem;
+    position: fixed;
+    inset: 0;
+    background-color: $clr-primary;
+    height: 100vh;
   }
 
   &__link {
     display: block;
-    color: $clr-gray-400;
-    transition: color .3s;
-
-    &:hover {
-      color: $clr-secondary;
-      transition: color .3s;
+    color: $clr-secondary;
+    font: {
+      size: 4.8rem;
+      weight: $fw-bold;
     }
+  }
 
-    &--featured {
+  &__toggle {
+    display: flex;
+    flex-direction: column;
+    width: 2.5rem;
+    position: relative;
+    z-index: 1;
+    gap: .4rem;
+    cursor: pointer;
+
+    &-line {
+      display: block;
+      width: 100%;
+      height: .2rem;
       background-color: $clr-secondary;
-      color: $clr-primary;
-      font-weight: $fw-bold;
-      padding: .75rem 1.6rem;
-      border: .1rem solid $clr-secondary;
-      border-radius: .5rem;
-      transition: background-color .3s, color .3s;
-
-      &:hover {
-        background-color: $clr-primary;
-        color: $clr-secondary;
-        transition: background-color .3s, color .3s;
-      }
     }
   }
 }

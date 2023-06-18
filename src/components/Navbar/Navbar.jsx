@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'
+import { motion, useCycle, AnimatePresence, MotionConfig } from 'framer-motion'
 import './Navbar.scss'
 
 export default function Navbar() {
@@ -19,22 +20,75 @@ export default function Navbar() {
     return () => { removeEventListener('scroll', handleScroll) }
   }, [])
 
+  const [isOpen, setIsOpen] = useCycle(false, true)
+
+  const navLinks = [
+    { path: '/', name: 'Home' },
+    { path: '/about', name: 'Sobre mí' },
+    { path: '/projects', name: 'Proyectos' },
+  ]
+
   return (
     <nav className={`nav ${isScrollTop ? 'nav--top' : ''}`}>
-      <ul className='nav__list'>
-        <li className='nav__list-item'>
-          <NavLink className='nav__link' to='/'>Home</NavLink>
-        </li>
-        <li className='nav__list-item'>
-          <NavLink className='nav__link' to='/about'>Sobre mí</NavLink>
-        </li>
-        <li className='nav__list-item'>
-          <NavLink className='nav__link' to='/projects'>Proyectos</NavLink>
-        </li>
-        <li className='nav__list-item'>
-          <a className='nav__link nav__link--featured' href="https://github.com/icutum" target='blank'>GitHub</a>
-        </li>
-      </ul>
+      <motion.div
+        className='nav__toggle'
+        onClick={() => setIsOpen()}
+        animate={isOpen ? 'open' : 'closed'}
+      >
+        <motion.span
+          variants={{
+            closed: { rotate: 0, y: 0 },
+            open: { rotate: 45, y: 6 },
+          }}
+          className='nav__toggle-line'
+        ></motion.span>
+        <motion.span
+          variants={{
+            closed: { opacity: 1 },
+            open: { opacity: 0 },
+          }}
+          className='nav__toggle-line'
+        ></motion.span>
+        <motion.span
+          variants={{
+            closed: { rotate: 0, y: 0 },
+            open: { rotate: -45, y: -6 },
+          }}
+          className='nav__toggle-line'
+        ></motion.span>
+      </motion.div>
+
+      <AnimatePresence>
+        {isOpen && (
+          <MotionConfig transition={{
+            type: 'spring',
+            bounce: 0,
+          }}>
+            <motion.ul className='nav__list' variants={
+                {
+                  open: { y: '0%' },
+                  closed: { y: '-100%' }
+                }
+              }
+              initial='closed'
+              animate='open'
+              exit='closed'
+            >
+              {navLinks.map((navLink, index) => (
+                <li key={index} className='nav__list-item'>
+                  <NavLink
+                    className='nav__link'
+                    to={navLink.path}
+                    onClick={() => setIsOpen()}
+                  >
+                    {navLink.name}
+                  </NavLink>
+                </li>
+              ))}
+            </motion.ul>
+          </MotionConfig>
+        )}
+      </AnimatePresence>
     </nav>
   )
 }

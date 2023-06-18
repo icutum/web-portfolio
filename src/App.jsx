@@ -1,8 +1,8 @@
-import { Routes, Route, useLocation } from 'react-router-dom';
-import { AnimatePresence } from 'framer-motion';
+import { Routes, Route, useLocation } from 'react-router-dom'
+import { AnimatePresence } from 'framer-motion'
 
-import { Home, About, Projects, Error } from './pages';
-import { Navbar } from './components';
+import { Home, About, Projects, Error } from './pages'
+import { Navbar } from './components'
 
 const routes = [
   { path: '/', element: <Home /> },
